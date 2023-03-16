@@ -4,6 +4,7 @@ import Home from "../components/Home";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import Main from "../Layout/Main";
+import PrivateRoute from "../PrivateRoutes/PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -16,7 +17,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/bookedroom',
-                element: <BookedRoom></BookedRoom>
+                element: <PrivateRoute><BookedRoom></BookedRoom></PrivateRoute>
             },
             {
                 path: '/login',
